@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate, Link } from 'react-router-dom';
+import Notifications from './Notifications';
 import { useAuth, Protected } from './AuthContext';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -22,6 +23,7 @@ export default function App() {
         <span style={{ marginLeft: 'auto' }}>
           {user ? (
             <>
+              <Notifications />
               {user.name} ({user.role}) <button onClick={logout}>Logout</button>
             </>
           ) : (
