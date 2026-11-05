@@ -1,6 +1,7 @@
 services:
   mysql:
     image: mysql:8
+    command: --default-time-zone=+05:30
     container_name: cfw-mysql
     environment:
       MYSQL_ROOT_PASSWORD: rootpass
